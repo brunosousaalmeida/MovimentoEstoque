@@ -36,6 +36,7 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
+            this.btnNovoUsuario = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,6 +97,7 @@
             this.btnEntrar.TabIndex = 5;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // btnSair
             // 
@@ -107,6 +109,16 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
+            // btnNovoUsuario
+            // 
+            this.btnNovoUsuario.Location = new System.Drawing.Point(30, 226);
+            this.btnNovoUsuario.Name = "btnNovoUsuario";
+            this.btnNovoUsuario.Size = new System.Drawing.Size(98, 23);
+            this.btnNovoUsuario.TabIndex = 7;
+            this.btnNovoUsuario.Text = "Novo Usuário";
+            this.btnNovoUsuario.UseVisualStyleBackColor = true;
+            this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -115,6 +127,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(593, 272);
+            this.Controls.Add(this.btnNovoUsuario);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
@@ -126,6 +139,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LOGIN";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -141,6 +155,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnNovoUsuario;
     }
 }
 

@@ -7,27 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MovimentoEstoque.BLL;
 
-namespace MovimentoEstoque
+namespace MovimentoEstoque.UI
 {
-    public partial class frmLogin : Form
+    public partial class frmPrincipal : Form
     {
-        string nomeUsuario = "", login = "", senha = "";
-        MovimentoEstoque.BLL.Usuarios = new MovimentoEstoque.BLL.Usuarios{}
-
-
-            
-        public frmLogin()
+        public frmPrincipal()
         {
             InitializeComponent();
         }
 
-        
-
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnProdutos_Click(object sender, EventArgs e)
+        {
+            frmCadastrarProduto produto = new frmCadastrarProduto();
+            produto.Show();
         }
     }
 }

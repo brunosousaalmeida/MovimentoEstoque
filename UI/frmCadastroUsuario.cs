@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace MovimentoEstoque.UI
 {
-    public partial class CadastroUsuario : Form
+    public partial class frmCadastroUsuario : Form
     {
-        public CadastroUsuario()
+        public frmCadastroUsuario()
         {
             InitializeComponent();
         }

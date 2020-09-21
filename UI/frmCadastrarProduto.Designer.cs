@@ -28,23 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarProduto));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgProdutos = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtQuantidadeInicial = new System.Windows.Forms.TextBox();
             this.txtPreco = new System.Windows.Forms.TextBox();
-            this.txtSalvar = new System.Windows.Forms.Button();
-            this.txtEditar = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnInserir = new System.Windows.Forms.Button();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.toolTipAtualizar = new System.Windows.Forms.ToolTip(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,19 +96,39 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Preço:";
             // 
-            // dataGridView1
+            // dtgProdutos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 174);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(756, 264);
-            this.dataGridView1.TabIndex = 5;
+            this.dtgProdutos.AllowUserToAddRows = false;
+            this.dtgProdutos.AllowUserToDeleteRows = false;
+            this.dtgProdutos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtgProdutos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgProdutos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgProdutos.Location = new System.Drawing.Point(32, 235);
+            this.dtgProdutos.Name = "dtgProdutos";
+            this.dtgProdutos.ReadOnly = true;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgProdutos.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgProdutos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
+            this.dtgProdutos.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgProdutos.Size = new System.Drawing.Size(756, 246);
+            this.dtgProdutos.TabIndex = 5;
+            this.dtgProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProdutos_CellDoubleClick);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(320, 137);
+            this.label6.Location = new System.Drawing.Point(320, 200);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(172, 20);
             this.label6.TabIndex = 6;
@@ -146,59 +170,56 @@
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(108, 20);
             this.txtPreco.TabIndex = 11;
+            this.txtPreco.Text = "0";
             // 
-            // txtSalvar
+            // btnInserir
             // 
-            this.txtSalvar.Location = new System.Drawing.Point(209, 102);
-            this.txtSalvar.Name = "txtSalvar";
-            this.txtSalvar.Size = new System.Drawing.Size(75, 23);
-            this.txtSalvar.TabIndex = 12;
-            this.txtSalvar.Text = "button1";
-            this.txtSalvar.UseVisualStyleBackColor = true;
+            this.btnInserir.Location = new System.Drawing.Point(517, 95);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(132, 39);
+            this.btnInserir.TabIndex = 12;
+            this.btnInserir.Text = "Salvar";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
             // 
-            // txtEditar
+            // btnAtualizar
             // 
-            this.txtEditar.Location = new System.Drawing.Point(302, 102);
-            this.txtEditar.Name = "txtEditar";
-            this.txtEditar.Size = new System.Drawing.Size(75, 23);
-            this.txtEditar.TabIndex = 13;
-            this.txtEditar.Text = "button2";
-            this.txtEditar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.btnAtualizar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnAtualizar.Image")));
+            this.btnAtualizar.Location = new System.Drawing.Point(725, 176);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(58, 55);
+            this.btnAtualizar.TabIndex = 13;
+            this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAtualizar.UseVisualStyleBackColor = true;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
             // 
-            // button3
+            // btnSair
             // 
-            this.button3.Location = new System.Drawing.Point(394, 102);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(490, 102);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSair.Location = new System.Drawing.Point(655, 95);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(132, 39);
+            this.btnSair.TabIndex = 16;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // frmCadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.txtEditar);
-            this.Controls.Add(this.txtSalvar);
+            this.ClientSize = new System.Drawing.Size(815, 493);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnAtualizar);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.txtPreco);
             this.Controls.Add(this.txtQuantidadeInicial);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtgProdutos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -206,7 +227,8 @@
             this.Controls.Add(this.label1);
             this.Name = "frmCadastrarProduto";
             this.Text = "Cadastrar Produto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmCadastrarProduto_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgProdutos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,16 +241,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgProdutos;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtQuantidadeInicial;
         private System.Windows.Forms.TextBox txtPreco;
-        private System.Windows.Forms.Button txtSalvar;
-        private System.Windows.Forms.Button txtEditar;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnInserir;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.ToolTip toolTipAtualizar;
     }
 }

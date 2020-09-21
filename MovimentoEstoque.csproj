@@ -48,17 +48,35 @@
   <ItemGroup>
     <Compile Include="Classes\Produto.cs" />
     <Compile Include="Classes\Usuario.cs" />
-    <Compile Include="UI\CadastroUsuario.cs">
+    <Compile Include="UI\frmAtualizarCadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\CadastroUsuario.Designer.cs">
-      <DependentUpon>CadastroUsuario.cs</DependentUpon>
+    <Compile Include="UI\frmAtualizarCadastroProduto.Designer.cs">
+      <DependentUpon>frmAtualizarCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmCadastroUsuario.Designer.cs">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmCadastrarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\frmCadastrarProduto.Designer.cs">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmConsultarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmConsultarEstoque.Designer.cs">
+      <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\frmHistoricoMovimentos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmHistoricoMovimentos.Designer.cs">
+      <DependentUpon>frmHistoricoMovimentos.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\frmLogin.cs">
       <SubType>Form</SubType>
@@ -74,11 +92,26 @@
     <Compile Include="UI\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\CadastroUsuario.resx">
-      <DependentUpon>CadastroUsuario.cs</DependentUpon>
+    <Compile Include="UI\frmMovimentoEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\frmMovimentoEstoque.Designer.cs">
+      <DependentUpon>frmMovimentoEstoque.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\frmAtualizarCadastroProduto.resx">
+      <DependentUpon>frmAtualizarCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmCadastroUsuario.resx">
+      <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmCadastrarProduto.resx">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmConsultarEstoque.resx">
+      <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmHistoricoMovimentos.resx">
+      <DependentUpon>frmHistoricoMovimentos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -95,6 +128,10 @@
     <EmbeddedResource Include="UI\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\frmMovimentoEstoque.resx">
+      <DependentUpon>frmMovimentoEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\MovimentoEstoque.Classes.Produto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

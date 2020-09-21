@@ -15,17 +15,32 @@ namespace MovimentoEstoque.UI
         public frmPrincipal()
         {
             InitializeComponent();
+            toolTipPrincipal.SetToolTip(btnProdutos,"Cadastros de produtos");
+            toolTipPrincipal.SetToolTip(btnMovimentoEstoque, "Realizar movimentos de estoque");
+            toolTipPrincipal.SetToolTip(btnHistoricoMovimento, "Consultar histórico de movimentos realizados");
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         private void btnProdutos_Click(object sender, EventArgs e)
         {
             frmCadastrarProduto produto = new frmCadastrarProduto();
             produto.Show();
+        }
+
+        private void btnMovimentoEstoque_Click(object sender, EventArgs e)
+        {
+            frmMovimentoEstoque movimento = new frmMovimentoEstoque();
+            movimento.Show();
+        }
+
+        private void btnHistoricoMovimento_Click(object sender, EventArgs e)
+        {
+            frmHistoricoMovimentos historico = new frmHistoricoMovimentos();
+            historico.Show();
         }
     }
 }

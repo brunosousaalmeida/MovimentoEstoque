@@ -1,6 +1,6 @@
 ﻿namespace MovimentoEstoque.UI
 {
-    partial class CadastroUsuario
+    partial class frmCadastroUsuario
     {
         /// <summary>
         /// Required designer variable.

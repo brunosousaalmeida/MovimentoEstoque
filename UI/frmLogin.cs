@@ -18,7 +18,7 @@ namespace MovimentoEstoque
         //Abertura de tela para cadastro de novo usuário
         private void btnNovoUsuario_Click(object sender, EventArgs e)
         {
-            CadastroUsuario cadastro = new CadastroUsuario();
+            frmCadastroUsuario cadastro = new frmCadastroUsuario();
             cadastro.Show();
         }
 

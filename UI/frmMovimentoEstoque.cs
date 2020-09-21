@@ -17,17 +17,13 @@ namespace MovimentoEstoque.UI
         public frmMovimentoEstoque()
         {
             InitializeComponent();
-
-
             toolTipMovimentoEstoque.SetToolTip(lblTipoMov,"Tipo de movimento a ser executado (Entrada ou saída)");
             
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        //Por enquanto, as interações com o banco estão incluídas nos botões do projeto.
 
+        #region Evento Duplo Click Campo Código
         private void txtCodigo_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             Close();
@@ -35,6 +31,9 @@ namespace MovimentoEstoque.UI
             consulta.Show();
         }
 
+        #endregion
+
+        #region Botão Movimentar Estoque
         private void btnMovimentar_Click(object sender, EventArgs e)
         {
             int cod = int.Parse(txtCodigo.Text);
@@ -71,6 +70,8 @@ namespace MovimentoEstoque.UI
 
             string strSql;
 
+            //Atualização do saldo na tabela de produto
+
             try
             {
                 conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
@@ -96,7 +97,8 @@ namespace MovimentoEstoque.UI
                 MessageBox.Show(ex.Message);
             }
 
-            
+            //Inserindo o movimento realizado na tabela de histórico.
+
             try
             {
                 conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
@@ -135,5 +137,15 @@ namespace MovimentoEstoque.UI
             txtPreco.Clear();
 
         }
+
+        #endregion
+
+        #region Botão Sair
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #endregion
     }
 }

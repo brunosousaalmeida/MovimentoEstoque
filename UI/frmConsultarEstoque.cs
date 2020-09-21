@@ -15,7 +15,10 @@ namespace MovimentoEstoque.UI
     {
         public frmConsultarEstoque()
         {
+            
             InitializeComponent();
+
+            #region Evento para popular a gridview
             SqlConnection conexao;
             SqlDataAdapter da;
             string strSql;
@@ -41,8 +44,14 @@ namespace MovimentoEstoque.UI
 
                 MessageBox.Show(ex.Message);
             }
+
+            #endregion
+
         }
 
+        //Evento duplo click no item da grid view, para escolha do item a ser movimentado.
+        
+        #region Evento Duplo Click Item Grid View
         private void dtgConsultaEstoque_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frmMovimentoEstoque movimento = new frmMovimentoEstoque();
@@ -55,5 +64,8 @@ namespace MovimentoEstoque.UI
             movimento.Show();
             
         }
+
+        #endregion
+
     }
 }

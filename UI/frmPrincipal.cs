@@ -20,27 +20,41 @@ namespace MovimentoEstoque.UI
             toolTipPrincipal.SetToolTip(btnHistoricoMovimento, "Consultar histórico de movimentos realizados");
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
 
+        #region Botão Cadastro de Produtos
         private void btnProdutos_Click(object sender, EventArgs e)
         {
             frmCadastrarProduto produto = new frmCadastrarProduto();
             produto.Show();
         }
 
+        #endregion
+
+        #region Botão Movimentar Estoque
         private void btnMovimentoEstoque_Click(object sender, EventArgs e)
         {
             frmMovimentoEstoque movimento = new frmMovimentoEstoque();
             movimento.Show();
         }
 
+        #endregion
+
+        #region Botão Histórico Movimento
         private void btnHistoricoMovimento_Click(object sender, EventArgs e)
         {
             frmHistoricoMovimentos historico = new frmHistoricoMovimentos();
             historico.Show();
         }
+
+        #endregion
+
+        #region Botão Sair
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        #endregion
+
     }
 }

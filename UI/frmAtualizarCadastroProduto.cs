@@ -18,11 +18,17 @@ namespace MovimentoEstoque.UI
             InitializeComponent();
         }
 
+        #region Botão Sair
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
         }
 
+        #endregion
+
+        //Por enquanto, as interações com o banco estão incluídas nos botões do projeto.
+
+        #region Botão Salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SqlConnection conexao;
@@ -60,8 +66,10 @@ namespace MovimentoEstoque.UI
                 MessageBox.Show(ex.Message);
             }
         }
-       
 
+        #endregion
+
+        #region Botão Excluir
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             SqlConnection conexao;
@@ -99,5 +107,7 @@ namespace MovimentoEstoque.UI
                 MessageBox.Show(ex.Message);
             }
         }
+
+        #endregion
     }
 }

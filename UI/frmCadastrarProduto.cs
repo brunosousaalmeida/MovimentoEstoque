@@ -21,6 +21,44 @@ namespace MovimentoEstoque.UI
 
         }
 
+        //Por enquanto, as interações com o banco estão incluídas nos botões do projeto.
+
+        #region Evento Load
+        private void frmCadastrarProduto_Load(object sender, EventArgs e)
+        {
+            SqlConnection conexao;
+            SqlDataAdapter da;
+
+
+            string strSql;
+
+            try
+            {
+                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id= sa; Password = open123;");
+                strSql = "SELECT * FROM [MovimentoEstoque].[dbo].[Estoque.Produto1]";
+
+                DataSet ds = new DataSet();
+                da = new SqlDataAdapter(strSql, conexao);
+
+                conexao.Open();
+                da.Fill(ds);
+
+                dtgProdutos.DataSource = ds.Tables[0];
+
+                conexao.Close();
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        #endregion
+
+        #region Botão Inserir
         private void btnInserir_Click(object sender, EventArgs e)
         {
             int quantidade;
@@ -70,38 +108,9 @@ namespace MovimentoEstoque.UI
 
         }
 
-        private void frmCadastrarProduto_Load(object sender, EventArgs e)
-        {
-            SqlConnection conexao;
-            SqlDataAdapter da;
+        #endregion
 
-
-            string strSql;
-
-            try
-            {
-                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id= sa; Password = open123;");
-                strSql = "SELECT * FROM [MovimentoEstoque].[dbo].[Estoque.Produto1]";
-
-                DataSet ds = new DataSet();
-                da = new SqlDataAdapter(strSql, conexao);
-
-                conexao.Open();
-                da.Fill(ds);
-
-                dtgProdutos.DataSource = ds.Tables[0];
-
-                conexao.Close();
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-
-        }
-
+        #region Botão Atualizar
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             SqlConnection conexao;
@@ -133,11 +142,11 @@ namespace MovimentoEstoque.UI
             }
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        #endregion
 
+        //O codigo para excluir um cadastro ou realizar update do mesmo está no evento abaixo
+
+        #region Evento Duplo Click Item Grid
         private void dtgProdutos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frmAtualizarCadastroProduto atualizarProduto = new frmAtualizarCadastroProduto();
@@ -149,5 +158,16 @@ namespace MovimentoEstoque.UI
             atualizarProduto.txtPreco.Text = this.dtgProdutos.CurrentRow.Cells[4].Value.ToString();
             atualizarProduto.Show();
         }
+
+        #endregion
+
+        #region Botão Sair
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #endregion
+
     }
 }

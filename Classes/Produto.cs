@@ -10,12 +10,14 @@ namespace MovimentoEstoque.Classes
 {
     public class Produto
     {
+
         public int Codigo;
         public string Nome;
         public string Descricao;
         public int Quantidade;
         public double Preco;
 
+        #region Construtores
         public Produto(int cod, string nome, string descricao, int quantidade, double preco)
         {
             Codigo = cod;
@@ -40,6 +42,10 @@ namespace MovimentoEstoque.Classes
             Quantidade = quantidade;
             Preco = preco;
         }
+
+        #endregion
+
+        #region Métodos
 
         /// <summary>
         /// Método para retirada de quantidade em estoque
@@ -66,6 +72,8 @@ namespace MovimentoEstoque.Classes
             int saldoAtualizado = quantidade + quantidadeEntrada;
             return saldoAtualizado;
         }
+
+        #endregion
 
     }
 }

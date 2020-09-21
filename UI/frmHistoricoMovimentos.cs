@@ -19,6 +19,7 @@ namespace MovimentoEstoque.UI
             toolTipAtualizarHist.SetToolTip(btnAtualizar, "Atualizar histórico de movimentos");
         }
 
+        #region Evento Load para popular a gridView
         private void frmHistoricoMovimentos_Load(object sender, EventArgs e)
         {
             SqlConnection conexao;
@@ -50,7 +51,11 @@ namespace MovimentoEstoque.UI
             }
         }
 
+        #endregion
 
+        //Por enquanto, as interações com o banco estão incluídas nos botões do projeto.
+
+        #region Botão Atualizar
         private void btnAtualizar_Click_1(object sender, EventArgs e)
         {
             SqlConnection conexao;
@@ -82,9 +87,14 @@ namespace MovimentoEstoque.UI
             }
         }
 
+        #endregion
+
+        #region Botão Sair
         private void btnSair_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+        #endregion
     }
 }

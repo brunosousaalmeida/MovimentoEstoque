@@ -18,11 +18,11 @@ namespace MovimentoEstoque.UI
             InitializeComponent();
         }
 
-        private void txtSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        //Por enquanto, as interações com o banco estão incluídas nos botões do projeto.
+        //Por ora é possível realizar cadastro de usuários, mas o mesmo ainda não é consumido
+        //Também falta a criação da tela de gerenciamento de usuários, que ficará disponível apenas para usuário administrador
 
+        #region Botão Salvar
         private void txtSalvar_Click(object sender, EventArgs e)
         {
 
@@ -63,6 +63,16 @@ namespace MovimentoEstoque.UI
             }
 
         }
+
+        #endregion
+
+        #region Botão Sair
+        private void txtSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        #endregion
     }
 }
 

@@ -53,11 +53,10 @@ namespace MovimentoEstoque.Classes
         /// <param name="quantidade"></param>
         /// <param name="quantidadeRetirar"></param>
         /// <returns>Saldo Atualizado</returns>
-        public int RetiradaEstoque(int quantidade, int quantidadeRetirar)
+        public int RetiradaEstoque(int quantidadeRetirar)
         {
-            Quantidade = quantidade;
-            int saldoAtualizado = quantidade - quantidadeRetirar;
-            return saldoAtualizado;
+            Quantidade -= quantidadeRetirar;
+            return Quantidade;
         }
 
         /// <summary>
@@ -66,11 +65,10 @@ namespace MovimentoEstoque.Classes
         /// <param name="quantidade"></param>
         /// <param name="quantidadeEntrada"></param>
         /// <returns></returns>
-        public int EntradaEstoque(int quantidade, int quantidadeEntrada)
+        public int EntradaEstoque(int quantidadeEntrada)
         {
-            Quantidade = quantidade;
-            int saldoAtualizado = quantidade + quantidadeEntrada;
-            return saldoAtualizado;
+            Quantidade += quantidadeEntrada;
+            return Quantidade;
         }
 
         #endregion

@@ -52,12 +52,12 @@ namespace MovimentoEstoque.UI
 
             if (tipoMov == "Entrada")
             {
-                estoqueAtualizado = produto.EntradaEstoque(qtde,qtdeMov);
+                estoqueAtualizado = produto.EntradaEstoque(qtdeMov);
 
             }
             else if (tipoMov == "Saída")
             {
-                estoqueAtualizado = produto.RetiradaEstoque(qtde, qtdeMov);
+                estoqueAtualizado = produto.RetiradaEstoque(qtdeMov);
             }
             else
             {

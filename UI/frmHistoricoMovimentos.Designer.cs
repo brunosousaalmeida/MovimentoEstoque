@@ -54,14 +54,14 @@
             this.dtgMovimentos.Location = new System.Drawing.Point(12, 145);
             this.dtgMovimentos.Name = "dtgMovimentos";
             this.dtgMovimentos.Size = new System.Drawing.Size(776, 314);
-            this.dtgMovimentos.TabIndex = 1;
+            this.dtgMovimentos.TabIndex = 3;
             // 
             // btnSair
             // 
             this.btnSair.Location = new System.Drawing.Point(711, 84);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(78, 55);
-            this.btnSair.TabIndex = 18;
+            this.btnSair.TabIndex = 2;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -74,7 +74,7 @@
             this.btnAtualizar.Location = new System.Drawing.Point(647, 84);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(58, 55);
-            this.btnAtualizar.TabIndex = 17;
+            this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click_1);

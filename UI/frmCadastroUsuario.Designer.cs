@@ -96,14 +96,14 @@
             this.txtNomeUsuario.Location = new System.Drawing.Point(222, 110);
             this.txtNomeUsuario.Name = "txtNomeUsuario";
             this.txtNomeUsuario.Size = new System.Drawing.Size(265, 20);
-            this.txtNomeUsuario.TabIndex = 5;
+            this.txtNomeUsuario.TabIndex = 1;
             // 
             // txtLogin
             // 
             this.txtLogin.Location = new System.Drawing.Point(222, 138);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(265, 20);
-            this.txtLogin.TabIndex = 6;
+            this.txtLogin.TabIndex = 2;
             // 
             // txtSenha
             // 
@@ -111,7 +111,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(265, 20);
-            this.txtSenha.TabIndex = 7;
+            this.txtSenha.TabIndex = 3;
             // 
             // txtConfSenha
             // 
@@ -119,7 +119,7 @@
             this.txtConfSenha.Name = "txtConfSenha";
             this.txtConfSenha.PasswordChar = '*';
             this.txtConfSenha.Size = new System.Drawing.Size(265, 20);
-            this.txtConfSenha.TabIndex = 8;
+            this.txtConfSenha.TabIndex = 4;
             // 
             // txtSalvar
             // 
@@ -127,7 +127,7 @@
             this.txtSalvar.Location = new System.Drawing.Point(188, 240);
             this.txtSalvar.Name = "txtSalvar";
             this.txtSalvar.Size = new System.Drawing.Size(75, 28);
-            this.txtSalvar.TabIndex = 9;
+            this.txtSalvar.TabIndex = 5;
             this.txtSalvar.Text = "Salvar";
             this.txtSalvar.UseVisualStyleBackColor = true;
             this.txtSalvar.Click += new System.EventHandler(this.txtSalvar_Click);
@@ -138,12 +138,12 @@
             this.txtSair.Location = new System.Drawing.Point(312, 240);
             this.txtSair.Name = "txtSair";
             this.txtSair.Size = new System.Drawing.Size(75, 28);
-            this.txtSair.TabIndex = 10;
+            this.txtSair.TabIndex = 6;
             this.txtSair.Text = "Sair";
             this.txtSair.UseVisualStyleBackColor = true;
             this.txtSair.Click += new System.EventHandler(this.txtSair_Click);
             // 
-            // CadastroUsuario
+            // frmCadastroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +160,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "CadastroUsuario";
+            this.Name = "frmCadastroUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Cadastro de Usuário";
             this.ResumeLayout(false);

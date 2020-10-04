@@ -121,7 +121,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight;
             this.dtgProdutos.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgProdutos.Size = new System.Drawing.Size(756, 246);
-            this.dtgProdutos.TabIndex = 5;
+            this.dtgProdutos.TabIndex = 8;
             this.dtgProdutos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgProdutos_CellDoubleClick);
             // 
             // label6
@@ -140,28 +140,28 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.ReadOnly = true;
             this.txtCodigo.Size = new System.Drawing.Size(231, 20);
-            this.txtCodigo.TabIndex = 7;
+            this.txtCodigo.TabIndex = 50;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(415, 21);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(368, 20);
-            this.txtDescricao.TabIndex = 8;
+            this.txtDescricao.TabIndex = 2;
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(73, 56);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(231, 20);
-            this.txtNome.TabIndex = 9;
+            this.txtNome.TabIndex = 1;
             // 
             // txtQuantidadeInicial
             // 
             this.txtQuantidadeInicial.Location = new System.Drawing.Point(415, 56);
             this.txtQuantidadeInicial.Name = "txtQuantidadeInicial";
             this.txtQuantidadeInicial.Size = new System.Drawing.Size(199, 20);
-            this.txtQuantidadeInicial.TabIndex = 10;
+            this.txtQuantidadeInicial.TabIndex = 3;
             this.txtQuantidadeInicial.Text = "0";
             // 
             // txtPreco
@@ -169,7 +169,7 @@
             this.txtPreco.Location = new System.Drawing.Point(675, 56);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(108, 20);
-            this.txtPreco.TabIndex = 11;
+            this.txtPreco.TabIndex = 4;
             this.txtPreco.Text = "0";
             // 
             // btnInserir
@@ -177,7 +177,7 @@
             this.btnInserir.Location = new System.Drawing.Point(517, 95);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(132, 39);
-            this.btnInserir.TabIndex = 12;
+            this.btnInserir.TabIndex = 5;
             this.btnInserir.Text = "Salvar";
             this.btnInserir.UseVisualStyleBackColor = true;
             this.btnInserir.Click += new System.EventHandler(this.btnInserir_Click);
@@ -190,7 +190,7 @@
             this.btnAtualizar.Location = new System.Drawing.Point(725, 176);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(58, 55);
-            this.btnAtualizar.TabIndex = 13;
+            this.btnAtualizar.TabIndex = 7;
             this.btnAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnAtualizar.UseVisualStyleBackColor = true;
             this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
@@ -200,7 +200,7 @@
             this.btnSair.Location = new System.Drawing.Point(655, 95);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(132, 39);
-            this.btnSair.TabIndex = 16;
+            this.btnSair.TabIndex = 6;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);

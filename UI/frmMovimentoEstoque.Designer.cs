@@ -54,7 +54,7 @@
             this.btnSair.Location = new System.Drawing.Point(317, 375);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 39;
+            this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -64,7 +64,7 @@
             this.btnMovimentar.Location = new System.Drawing.Point(196, 375);
             this.btnMovimentar.Name = "btnMovimentar";
             this.btnMovimentar.Size = new System.Drawing.Size(75, 23);
-            this.btnMovimentar.TabIndex = 37;
+            this.btnMovimentar.TabIndex = 7;
             this.btnMovimentar.Text = "Movimentar";
             this.btnMovimentar.UseVisualStyleBackColor = true;
             this.btnMovimentar.Click += new System.EventHandler(this.btnMovimentar_Click);
@@ -84,7 +84,7 @@
             this.txtPreco.Location = new System.Drawing.Point(238, 247);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(132, 20);
-            this.txtPreco.TabIndex = 35;
+            this.txtPreco.TabIndex = 4;
             this.txtPreco.Text = "0";
             // 
             // txtQtdeEstoque
@@ -101,14 +101,14 @@
             this.txtNome.Location = new System.Drawing.Point(238, 144);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(255, 20);
-            this.txtNome.TabIndex = 33;
+            this.txtNome.TabIndex = 2;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(238, 176);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(257, 20);
-            this.txtDescricao.TabIndex = 32;
+            this.txtDescricao.TabIndex = 3;
             // 
             // label5
             // 
@@ -173,14 +173,14 @@
             this.cboTipoMovimento.Location = new System.Drawing.Point(238, 283);
             this.cboTipoMovimento.Name = "cboTipoMovimento";
             this.cboTipoMovimento.Size = new System.Drawing.Size(132, 21);
-            this.cboTipoMovimento.TabIndex = 41;
+            this.cboTipoMovimento.TabIndex = 5;
             // 
             // txtCodigo
             // 
             this.txtCodigo.Location = new System.Drawing.Point(238, 113);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(132, 20);
-            this.txtCodigo.TabIndex = 42;
+            this.txtCodigo.TabIndex = 1;
             this.txtCodigo.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.txtCodigo_MouseDoubleClick);
             // 
             // txtQtdeMov
@@ -188,7 +188,7 @@
             this.txtQtdeMov.Location = new System.Drawing.Point(238, 321);
             this.txtQtdeMov.Name = "txtQtdeMov";
             this.txtQtdeMov.Size = new System.Drawing.Size(132, 20);
-            this.txtQtdeMov.TabIndex = 44;
+            this.txtQtdeMov.TabIndex = 6;
             this.txtQtdeMov.Text = "0";
             // 
             // label7

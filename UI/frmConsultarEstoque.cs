@@ -60,9 +60,11 @@ namespace MovimentoEstoque.UI
             movimento.txtDescricao.Text = this.dtgConsultaEstoque.CurrentRow.Cells[2].Value.ToString();
             movimento.txtQtdeEstoque.Text = this.dtgConsultaEstoque.CurrentRow.Cells[3].Value.ToString();
             movimento.txtPreco.Text = this.dtgConsultaEstoque.CurrentRow.Cells[4].Value.ToString();
+            
             Close();
             movimento.Show();
-            
+            movimento.txtPreco.Focus();
+
         }
 
         #endregion

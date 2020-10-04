@@ -49,7 +49,7 @@
             this.txtPreco.Location = new System.Drawing.Point(141, 219);
             this.txtPreco.Name = "txtPreco";
             this.txtPreco.Size = new System.Drawing.Size(132, 20);
-            this.txtPreco.TabIndex = 21;
+            this.txtPreco.TabIndex = 4;
             this.txtPreco.Text = "0";
             // 
             // txtQuantidade
@@ -57,7 +57,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(141, 183);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(132, 20);
-            this.txtQuantidade.TabIndex = 20;
+            this.txtQuantidade.TabIndex = 3;
             this.txtQuantidade.Text = "0";
             // 
             // txtNome
@@ -65,14 +65,14 @@
             this.txtNome.Location = new System.Drawing.Point(141, 116);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(255, 20);
-            this.txtNome.TabIndex = 19;
+            this.txtNome.TabIndex = 1;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(141, 148);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(257, 20);
-            this.txtDescricao.TabIndex = 18;
+            this.txtDescricao.TabIndex = 2;
             // 
             // txtCodigo
             // 
@@ -142,7 +142,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(98, 270);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
-            this.btnSalvar.TabIndex = 23;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -152,7 +152,7 @@
             this.btnExcluir.Location = new System.Drawing.Point(198, 270);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
-            this.btnExcluir.TabIndex = 24;
+            this.btnExcluir.TabIndex = 6;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -162,7 +162,7 @@
             this.btnSair.Location = new System.Drawing.Point(294, 270);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 25;
+            this.btnSair.TabIndex = 7;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);

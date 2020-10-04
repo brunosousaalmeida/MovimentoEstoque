@@ -79,7 +79,7 @@
             this.txtLogin.Location = new System.Drawing.Point(209, 131);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.Size = new System.Drawing.Size(199, 22);
-            this.txtLogin.TabIndex = 3;
+            this.txtLogin.TabIndex = 1;
             // 
             // txtSenha
             // 
@@ -87,14 +87,14 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(199, 22);
-            this.txtSenha.TabIndex = 4;
+            this.txtSenha.TabIndex = 2;
             // 
             // btnEntrar
             // 
             this.btnEntrar.Location = new System.Drawing.Point(401, 226);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(75, 23);
-            this.btnEntrar.TabIndex = 5;
+            this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -104,7 +104,7 @@
             this.btnSair.Location = new System.Drawing.Point(482, 226);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
-            this.btnSair.TabIndex = 6;
+            this.btnSair.TabIndex = 4;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -114,7 +114,7 @@
             this.btnNovoUsuario.Location = new System.Drawing.Point(30, 226);
             this.btnNovoUsuario.Name = "btnNovoUsuario";
             this.btnNovoUsuario.Size = new System.Drawing.Size(98, 23);
-            this.btnNovoUsuario.TabIndex = 7;
+            this.btnNovoUsuario.TabIndex = 5;
             this.btnNovoUsuario.Text = "Novo Usuário";
             this.btnNovoUsuario.UseVisualStyleBackColor = true;
             this.btnNovoUsuario.Click += new System.EventHandler(this.btnNovoUsuario_Click);

@@ -45,7 +45,7 @@
             this.txtAdmUsuarios.Location = new System.Drawing.Point(686, 347);
             this.txtAdmUsuarios.Name = "txtAdmUsuarios";
             this.txtAdmUsuarios.Size = new System.Drawing.Size(102, 43);
-            this.txtAdmUsuarios.TabIndex = 0;
+            this.txtAdmUsuarios.TabIndex = 4;
             this.txtAdmUsuarios.Text = "Administrar Usuários:";
             this.txtAdmUsuarios.UseVisualStyleBackColor = true;
             this.txtAdmUsuarios.Visible = false;
@@ -56,7 +56,7 @@
             this.btnSair.Location = new System.Drawing.Point(686, 396);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(102, 42);
-            this.btnSair.TabIndex = 1;
+            this.btnSair.TabIndex = 5;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
@@ -67,7 +67,7 @@
             this.btnProdutos.Location = new System.Drawing.Point(12, 12);
             this.btnProdutos.Name = "btnProdutos";
             this.btnProdutos.Size = new System.Drawing.Size(151, 146);
-            this.btnProdutos.TabIndex = 2;
+            this.btnProdutos.TabIndex = 1;
             this.btnProdutos.UseVisualStyleBackColor = true;
             this.btnProdutos.Click += new System.EventHandler(this.btnProdutos_Click);
             // 
@@ -79,7 +79,7 @@
             this.btnMovimentoEstoque.Location = new System.Drawing.Point(202, 12);
             this.btnMovimentoEstoque.Name = "btnMovimentoEstoque";
             this.btnMovimentoEstoque.Size = new System.Drawing.Size(151, 146);
-            this.btnMovimentoEstoque.TabIndex = 3;
+            this.btnMovimentoEstoque.TabIndex = 2;
             this.btnMovimentoEstoque.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnMovimentoEstoque.UseVisualStyleBackColor = true;
             this.btnMovimentoEstoque.Click += new System.EventHandler(this.btnMovimentoEstoque_Click);
@@ -102,7 +102,7 @@
             this.btnHistoricoMovimento.Location = new System.Drawing.Point(395, 12);
             this.btnHistoricoMovimento.Name = "btnHistoricoMovimento";
             this.btnHistoricoMovimento.Size = new System.Drawing.Size(151, 146);
-            this.btnHistoricoMovimento.TabIndex = 5;
+            this.btnHistoricoMovimento.TabIndex = 3;
             this.btnHistoricoMovimento.UseVisualStyleBackColor = true;
             this.btnHistoricoMovimento.Click += new System.EventHandler(this.btnHistoricoMovimento_Click);
             // 

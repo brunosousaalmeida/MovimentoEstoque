@@ -111,6 +111,52 @@ namespace MovimentoEstoque.Classes
             return Quantidade;
         }
 
+        /// <summary>
+        /// Método para inserir um novo cadastro de produto no banco
+        /// </summary>
+
+        public void InserirProduto()
+        {
+
+
+
+            SqlConnection conexao;
+            SqlCommand comando;
+
+
+            string strSql;
+
+            try
+            {
+                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
+                strSql = "INSERT INTO [MovimentoEstoque].[dbo].[Estoque.Produto1] (NOME, DESCRICAO, QUANTIDADE , PRECO) VALUES ( @NOME, @DESCRICAO, @QUANTIDADE, @PRECO)";
+                comando = new SqlCommand(strSql, conexao);
+                comando.Parameters.AddWithValue("@NOME", _nome);
+                comando.Parameters.AddWithValue("@DESCRICAO", Descricao);
+                comando.Parameters.AddWithValue("@QUANTIDADE", Quantidade);
+                comando.Parameters.AddWithValue("@PRECO", Preco);
+
+
+                conexao.Open();
+                comando.ExecuteNonQuery();
+
+
+                conexao.Close();
+                comando.Clone();
+                conexao = null;
+                comando = null;
+
+            }
+            catch (Exception ex)
+            {
+
+                string erro = ex.Message;
+            }
+
+
+        }
+
+
         #endregion
 
     }

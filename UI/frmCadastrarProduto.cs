@@ -61,51 +61,23 @@ namespace MovimentoEstoque.UI
         #region Botão Inserir
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            int quantidade;
-            string nome, descricao;
-            double preco;
+            string nome = txtNome.Text;
+            string desc = txtDescricao.Text;
+            int quant = int.Parse(txtQuantidadeInicial.Text);
+            double preco = double.Parse(txtPreco.Text);
 
+            Produto p = new Produto(nome, desc, quant, preco);
 
-            nome = txtNome.Text;
-            descricao = txtDescricao.Text;
-            quantidade = int.Parse(txtQuantidadeInicial.Text);
-            preco = double.Parse(txtPreco.Text);
+            p.InserirProduto();
 
-            Produto produto = new Produto(nome, descricao, quantidade, preco);
+            txtNome.Clear();
+            txtCodigo.Clear();
+            txtDescricao.Clear();
+            txtQuantidadeInicial.Clear();
+            txtPreco.Clear();
+            txtNome.Focus();
 
-            SqlConnection conexao;
-            SqlCommand comando;
-
-
-            string strSql;
-
-            try
-            {
-                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
-                strSql = "INSERT INTO [MovimentoEstoque].[dbo].[Estoque.Produto1] (NOME, DESCRICAO, QUANTIDADE , PRECO) VALUES ( @NOME, @DESCRICAO, @QUANTIDADE, @PRECO)";
-                comando = new SqlCommand(strSql, conexao);
-                comando.Parameters.AddWithValue("@NOME", produto.Nome);
-                comando.Parameters.AddWithValue("@DESCRICAO", produto.Descricao);
-                comando.Parameters.AddWithValue("@QUANTIDADE", produto.Quantidade);
-                comando.Parameters.AddWithValue("@PRECO", produto.Preco);
-
-
-                conexao.Open();
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Cadastro inserido com êxito!", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                conexao.Close();
-                comando.Clone();
-                conexao = null;
-                comando = null;
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-
+            MessageBox.Show("Cadastro inserido com êxito!", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #endregion

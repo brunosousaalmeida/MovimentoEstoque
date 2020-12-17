@@ -46,8 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Produto.cs" />
-    <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="BLL\Classes\MovimentoEstoque.cs" />
+    <Compile Include="BLL\Classes\Produto.cs" />
+    <Compile Include="BLL\Classes\Usuario.cs" />
+    <Compile Include="DAL\ContextDBProduto.cs" />
+    <Compile Include="DAL\ContextDBUsuario.cs" />
     <Compile Include="UI\frmAtualizarCadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>

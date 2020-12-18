@@ -46,77 +46,72 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\Classes\MovimentoEstoque.cs" />
-    <Compile Include="BLL\Classes\Produto.cs" />
-    <Compile Include="BLL\Classes\Usuario.cs" />
-    <Compile Include="DAL\ContextDBProduto.cs" />
-    <Compile Include="DAL\ContextDBUsuario.cs" />
-    <Compile Include="UI\frmAtualizarCadastroProduto.cs">
+    <Compile Include="Forms\frmAtualizarCadastroProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmAtualizarCadastroProduto.Designer.cs">
+    <Compile Include="Forms\frmAtualizarCadastroProduto.Designer.cs">
       <DependentUpon>frmAtualizarCadastroProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmCadastroUsuario.cs">
+    <Compile Include="Forms\frmCadastroUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmCadastroUsuario.Designer.cs">
+    <Compile Include="Forms\frmCadastroUsuario.Designer.cs">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmCadastrarProduto.cs">
+    <Compile Include="Forms\frmCadastrarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmCadastrarProduto.Designer.cs">
+    <Compile Include="Forms\frmCadastrarProduto.Designer.cs">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmConsultarEstoque.cs">
+    <Compile Include="Forms\frmConsultarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmConsultarEstoque.Designer.cs">
+    <Compile Include="Forms\frmConsultarEstoque.Designer.cs">
       <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmHistoricoMovimentos.cs">
+    <Compile Include="Forms\frmHistoricoMovimentos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmHistoricoMovimentos.Designer.cs">
+    <Compile Include="Forms\frmHistoricoMovimentos.Designer.cs">
       <DependentUpon>frmHistoricoMovimentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmLogin.cs">
+    <Compile Include="Forms\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmLogin.Designer.cs">
+    <Compile Include="Forms\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\frmPrincipal.cs">
+    <Compile Include="Forms\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmPrincipal.Designer.cs">
+    <Compile Include="Forms\frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\frmMovimentoEstoque.cs">
+    <Compile Include="Forms\frmMovimentoEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\frmMovimentoEstoque.Designer.cs">
+    <Compile Include="Forms\frmMovimentoEstoque.Designer.cs">
       <DependentUpon>frmMovimentoEstoque.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\frmAtualizarCadastroProduto.resx">
+    <EmbeddedResource Include="Forms\frmAtualizarCadastroProduto.resx">
       <DependentUpon>frmAtualizarCadastroProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmCadastroUsuario.resx">
+    <EmbeddedResource Include="Forms\frmCadastroUsuario.resx">
       <DependentUpon>frmCadastroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmCadastrarProduto.resx">
+    <EmbeddedResource Include="Forms\frmCadastrarProduto.resx">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmConsultarEstoque.resx">
+    <EmbeddedResource Include="Forms\frmConsultarEstoque.resx">
       <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmHistoricoMovimentos.resx">
+    <EmbeddedResource Include="Forms\frmHistoricoMovimentos.resx">
       <DependentUpon>frmHistoricoMovimentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmLogin.resx">
+    <EmbeddedResource Include="Forms\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -128,10 +123,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UI\frmPrincipal.resx">
+    <EmbeddedResource Include="Forms\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\frmMovimentoEstoque.resx">
+    <EmbeddedResource Include="Forms\frmMovimentoEstoque.resx">
       <DependentUpon>frmMovimentoEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MovimentoEstoque.Classes.Produto.datasource" />
@@ -147,6 +142,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MovimentoEstoque.BLL\MovimentoEstoque.BLL.csproj">
+      <Project>{f5559882-10d3-4192-802f-00b0a2a794b9}</Project>
+      <Name>MovimentoEstoque.BLL</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

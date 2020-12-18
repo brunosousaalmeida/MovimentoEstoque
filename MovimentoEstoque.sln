@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque", "MovimentoEstoque.csproj", "{CED44707-C8A4-4D29-8F57-F61956BF59F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.UI", "MovimentoEstoque.UI.csproj", "{CED44707-C8A4-4D29-8F57-F61956BF59F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.BLL", "..\MovimentoEstoque.BLL\MovimentoEstoque.BLL.csproj", "{F5559882-10D3-4192-802F-00B0A2A794B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.DAL", "..\MovimentoEstoque.DAL\MovimentoEstoque.DAL.csproj", "{ED22F942-80AD-4732-AE75-70F5251927D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{CED44707-C8A4-4D29-8F57-F61956BF59F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CED44707-C8A4-4D29-8F57-F61956BF59F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CED44707-C8A4-4D29-8F57-F61956BF59F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5559882-10D3-4192-802F-00B0A2A794B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5559882-10D3-4192-802F-00B0A2A794B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5559882-10D3-4192-802F-00B0A2A794B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5559882-10D3-4192-802F-00B0A2A794B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED22F942-80AD-4732-AE75-70F5251927D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED22F942-80AD-4732-AE75-70F5251927D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED22F942-80AD-4732-AE75-70F5251927D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED22F942-80AD-4732-AE75-70F5251927D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

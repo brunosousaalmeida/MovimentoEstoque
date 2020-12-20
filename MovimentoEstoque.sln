@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.UI", "MovimentoEstoque.UI.csproj", "{CED44707-C8A4-4D29-8F57-F61956BF59F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.BLL", "..\MovimentoEstoque.BLL\MovimentoEstoque.BLL.csproj", "{F5559882-10D3-4192-802F-00B0A2A794B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.BLL", "MovimentoEstoque.BLL\MovimentoEstoque.BLL.csproj", "{F5559882-10D3-4192-802F-00B0A2A794B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.DAL", "..\MovimentoEstoque.DAL\MovimentoEstoque.DAL.csproj", "{ED22F942-80AD-4732-AE75-70F5251927D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovimentoEstoque.DAL", "MovimentoEstoque.DAL\MovimentoEstoque.DAL.csproj", "{ED22F942-80AD-4732-AE75-70F5251927D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -144,7 +144,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MovimentoEstoque.BLL\MovimentoEstoque.BLL.csproj">
+    <ProjectReference Include="MovimentoEstoque.BLL\MovimentoEstoque.BLL.csproj">
       <Project>{f5559882-10d3-4192-802f-00b0a2a794b9}</Project>
       <Name>MovimentoEstoque.BLL</Name>
     </ProjectReference>

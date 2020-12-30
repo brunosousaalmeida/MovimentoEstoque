@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovimentoEstoque.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,45 +27,26 @@ namespace MovimentoEstoque.UI
 
         #endregion
 
-        //Por enquanto, as interações com o banco estão incluídas nos botões do projeto.
+        //Botão para salvar atualização do cadastro, utilizando métodos da BLL.Produto (método update)
 
         #region Botão Salvar
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao;
-            SqlCommand comando;
-
-
-            string strSql;
+            Produto produto = new Produto(txtNome.Text, txtDescricao.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text));
 
             try
             {
-                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
-                strSql = "UPDATE[MovimentoEstoque].[dbo].[Estoque.Produto1] SET Nome = @NOME, Descricao = @DESCRICAO, Quantidade = @QUANTIDADE, Preco = @PRECO WHERE Codigo = @CODIGO";
-                comando = new SqlCommand(strSql, conexao);
-                comando.Parameters.AddWithValue("@CODIGO", txtCodigo.Text);
-                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
-                comando.Parameters.AddWithValue("@DESCRICAO", txtDescricao.Text);
-                comando.Parameters.AddWithValue("@QUANTIDADE", txtQuantidade.Text);
-                comando.Parameters.AddWithValue("@PRECO", txtPreco.Text);
+                produto.AtualizarCadastro();
 
-
-                conexao.Open();
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Cadastro atualizado com êxito!", "Atualização de Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                conexao.Close();
-                comando.Clone();
-                conexao = null;
-                comando = null;
+                MessageBox.Show("Cadastro atualizado com êxito!", "Cadastro Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
-
             }
-            catch (Exception ex)
+
+            catch(Exception ex)
             {
+                MessageBox.Show($"Erro ao atualizar o cadastro!{ex}", "Erro Atualização Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }            
 
-                MessageBox.Show(ex.Message);
-            }
         }
 
         #endregion

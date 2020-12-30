@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovimentoEstoque.DAL;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -20,6 +21,8 @@ namespace MovimentoEstoque.Classes
 
         public double Preco { get; private set; }
 
+        public ContextDBProduto ContextProduto { get; set; }
+
         #endregion
 
         #region Construtores
@@ -39,6 +42,8 @@ namespace MovimentoEstoque.Classes
             Descricao = descricao;
             Quantidade = quantidade;
             Preco = preco;
+
+            ContextProduto = new ContextDBProduto(_nome, Descricao, Quantidade, Preco);
         }
 
         /// <summary>
@@ -54,6 +59,8 @@ namespace MovimentoEstoque.Classes
             _nome = nome;
             Descricao = descricao;
             Preco = preco;
+
+            ContextProduto = new ContextDBProduto(Codigo, _nome, Descricao, Preco);
         }
 
         /// <summary>
@@ -69,6 +76,8 @@ namespace MovimentoEstoque.Classes
             Descricao = descricao;
             Quantidade = quantidade;
             Preco = preco;
+
+            ContextProduto = new ContextDBProduto(Codigo, _nome, Descricao, Preco);
         }
 
         public string Nome
@@ -86,6 +95,8 @@ namespace MovimentoEstoque.Classes
         #endregion
 
         #region Métodos
+
+
 
         /// <summary>
         /// Método para retirada de quantidade em estoque
@@ -115,45 +126,14 @@ namespace MovimentoEstoque.Classes
         /// Método para inserir um novo cadastro de produto no banco
         /// </summary>
 
-        public void InserirProduto()
+        public void CadastrarProduto()
         {
+            ContextProduto.SalvarProduto();
+        }
 
-
-
-            SqlConnection conexao;
-            SqlCommand comando;
-
-
-            string strSql;
-
-            try
-            {
-                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
-                strSql = "INSERT INTO [MovimentoEstoque].[dbo].[Estoque.Produto1] (NOME, DESCRICAO, QUANTIDADE , PRECO) VALUES ( @NOME, @DESCRICAO, @QUANTIDADE, @PRECO)";
-                comando = new SqlCommand(strSql, conexao);
-                comando.Parameters.AddWithValue("@NOME", _nome);
-                comando.Parameters.AddWithValue("@DESCRICAO", Descricao);
-                comando.Parameters.AddWithValue("@QUANTIDADE", Quantidade);
-                comando.Parameters.AddWithValue("@PRECO", Preco);
-
-
-                conexao.Open();
-                comando.ExecuteNonQuery();
-
-
-                conexao.Close();
-                comando.Clone();
-                conexao = null;
-                comando = null;
-
-            }
-            catch (Exception ex)
-            {
-
-                string erro = ex.Message;
-            }
-
-
+        public void AtualizarCadastro()
+        {
+            ContextProduto.AtualizaCadastroProduto();
         }
 
 

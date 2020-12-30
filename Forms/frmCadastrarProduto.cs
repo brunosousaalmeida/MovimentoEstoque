@@ -61,23 +61,28 @@ namespace MovimentoEstoque.UI
         #region Botão Inserir
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            string nome = txtNome.Text;
-            string desc = txtDescricao.Text;
-            int quant = int.Parse(txtQuantidadeInicial.Text);
-            double preco = double.Parse(txtPreco.Text);
+            Produto p = new Produto(txtNome.Text, txtDescricao.Text, int.Parse(txtQuantidadeInicial.Text), double.Parse(txtPreco.Text));
 
-            Produto p = new Produto(nome, desc, quant, preco);
+            try
+            {
+                p.CadastrarProduto();
 
-            p.InserirProduto();
+                txtNome.Clear();
+                txtCodigo.Clear();
+                txtDescricao.Clear();
+                txtQuantidadeInicial.Clear();
+                txtPreco.Clear();
+                txtNome.Focus();
 
-            txtNome.Clear();
-            txtCodigo.Clear();
-            txtDescricao.Clear();
-            txtQuantidadeInicial.Clear();
-            txtPreco.Clear();
-            txtNome.Focus();
+                MessageBox.Show("Cadastro inserido com êxito!", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            MessageBox.Show("Cadastro inserido com êxito!", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Erro ao tentar inserir o cadastro!{ex}", "Erro ao Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
         }
 
         #endregion

@@ -19,20 +19,12 @@ namespace MovimentoEstoque.UI
             InitializeComponent();
         }
 
-        #region Botão Sair
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        #endregion
-
         //Botão para salvar atualização do cadastro, utilizando métodos da BLL.Produto (método update)
 
-        #region Botão Salvar
+        #region Botão Salvar (Atualizar cadastro)
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto(txtNome.Text, txtDescricao.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text));
+            Produto produto = new Produto(int.Parse(txtCodigo.Text), txtNome.Text, txtDescricao.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text));
 
             try
             {
@@ -51,43 +43,36 @@ namespace MovimentoEstoque.UI
 
         #endregion
 
+        //Botão para excluir cadastro selecionado (dados expostos no form)
+
         #region Botão Excluir
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            SqlConnection conexao;
-            SqlCommand comando;
-
-
-            string strSql;
+            
+            Produto produto = new Produto(int.Parse(txtCodigo.Text), txtNome.Text, txtDescricao.Text, int.Parse(txtQuantidade.Text), double.Parse(txtPreco.Text));
 
             try
             {
-                conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
-                strSql = "DELETE FROM [MovimentoEstoque].[dbo].[Estoque.Produto1] WHERE Codigo = @CODIGO";
-                comando = new SqlCommand(strSql, conexao);
-                comando.Parameters.AddWithValue("@CODIGO", txtCodigo.Text);
-                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
-                comando.Parameters.AddWithValue("@DESCRICAO", txtDescricao.Text);
-                comando.Parameters.AddWithValue("@QUANTIDADE", txtQuantidade.Text);
-                comando.Parameters.AddWithValue("@PRECO", txtPreco.Text);
+                produto.DeletarCadastro();
 
-
-                conexao.Open();
-                comando.ExecuteNonQuery();
-                MessageBox.Show("Cadastro excluído com êxito!", "Exclusão de Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-
-                conexao.Close();
-                comando.Clone();
-                conexao = null;
-                comando = null;
+                MessageBox.Show("Cadastro excluído com êxito!", "Cadastro Excluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
-
             }
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Erro ao excluir o cadastro!{ex}", "Erro Exclusão Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        #endregion
+
+        //Botão simples para cancelar operação
+
+        #region Botão Sair
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
         }
 
         #endregion

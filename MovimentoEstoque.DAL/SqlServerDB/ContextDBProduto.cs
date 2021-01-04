@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,7 @@ namespace MovimentoEstoque.DAL
 
         public double Preco { get; private set; }
 
-
+        SqlConnection conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
 
         #endregion
 
@@ -45,23 +46,30 @@ namespace MovimentoEstoque.DAL
 
         }
 
+        public ContextDBProduto(int cod, string nome, string descricao, int quantidade, double preco)
+        {
+            Codigo = cod;
+            Nome = nome;
+            Descricao = descricao;
+            Quantidade = quantidade;
+            Preco = preco;
+
+        }
+
 
 
         #endregion
 
         #region Métodos CRUD
 
-
-        #region Create
-
-
-        SqlConnection conexao;
         SqlCommand comando;
         string strSql;
 
+        #region Create
+
         public void SalvarProduto()
         {
-            conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
+
             strSql = "INSERT INTO [MovimentoEstoque].[dbo].[Estoque.Produto1] (NOME, DESCRICAO, QUANTIDADE , PRECO) VALUES ( @NOME, @DESCRICAO, @QUANTIDADE, @PRECO)";
             comando = new SqlCommand(strSql, conexao);
             comando.Parameters.AddWithValue("@NOME", Nome);
@@ -81,18 +89,30 @@ namespace MovimentoEstoque.DAL
 
         }
 
-
-
-
-
-
-
-
-
-
         #endregion
 
         #region Read
+
+        public SqlDataAdapter ObterProdutos()
+
+        {
+            strSql = "SELECT * FROM [MovimentoEstoque].[dbo].[Estoque.Produto1]";
+
+            SqlDataAdapter da = new SqlDataAdapter(strSql, conexao);
+            DataSet ds = new DataSet();
+
+            da.Fill(ds);
+
+            conexao.Open();
+
+            conexao.Close();
+
+
+
+            return da;
+
+        }
+
 
 
         #endregion
@@ -101,8 +121,7 @@ namespace MovimentoEstoque.DAL
 
         public void AtualizaCadastroProduto()
         {
-
-            conexao = new SqlConnection("Server=LAPTOP-DPAT0JHO\\SQLEXPRESS;Database=MovimentoEstoque;User Id=sa; Password = open123;");
+            
             strSql = "UPDATE[MovimentoEstoque].[dbo].[Estoque.Produto1] SET Nome = @NOME, Descricao = @DESCRICAO, Quantidade = @QUANTIDADE, Preco = @PRECO WHERE Codigo = @CODIGO";
             comando = new SqlCommand(strSql, conexao);
             comando.Parameters.AddWithValue("@CODIGO", Codigo);
@@ -114,15 +133,11 @@ namespace MovimentoEstoque.DAL
 
             conexao.Open();
             comando.ExecuteNonQuery();
-            //MessageBox.Show("Cadastro atualizado com êxito!", "Atualização de Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             conexao.Close();
             comando.Clone();
             conexao = null;
             comando = null;
-
-
-
 
         }
 
@@ -132,6 +147,27 @@ namespace MovimentoEstoque.DAL
 
         #region Delete
 
+        public void DeletarCadastroProduto()
+        {
+
+            strSql = "DELETE FROM [MovimentoEstoque].[dbo].[Estoque.Produto1] WHERE Codigo = @CODIGO";
+            comando = new SqlCommand(strSql, conexao);
+            comando.Parameters.AddWithValue("@CODIGO", Codigo);
+            comando.Parameters.AddWithValue("@NOME", Nome);
+            comando.Parameters.AddWithValue("@DESCRICAO", Descricao);
+            comando.Parameters.AddWithValue("@QUANTIDADE", Quantidade);
+            comando.Parameters.AddWithValue("@PRECO", Preco);
+
+
+            conexao.Open();
+            comando.ExecuteNonQuery();
+
+            conexao.Close();
+            comando.Clone();
+            conexao = null;
+            comando = null;
+
+        }
 
         #endregion
 

@@ -28,6 +28,14 @@ namespace MovimentoEstoque.Classes
         #region Construtores
 
         /// <summary>
+        /// Construtor padrão (vazio)
+        /// </summary>
+        public Produto()
+        {
+
+        }
+
+        /// <summary>
         /// Construtor completo
         /// </summary>
         /// <param name="cod"></param>
@@ -43,7 +51,7 @@ namespace MovimentoEstoque.Classes
             Quantidade = quantidade;
             Preco = preco;
 
-            ContextProduto = new ContextDBProduto(_nome, Descricao, Quantidade, Preco);
+            ContextProduto = new ContextDBProduto(Codigo, _nome, Descricao, Quantidade, Preco);
         }
 
         /// <summary>
@@ -131,11 +139,23 @@ namespace MovimentoEstoque.Classes
             ContextProduto.SalvarProduto();
         }
 
+
+
+        public SqlDataAdapter ObterTodosProdutos()
+
+        {
+            return ContextProduto.ObterProdutos();
+        }
+
         public void AtualizarCadastro()
         {
             ContextProduto.AtualizaCadastroProduto();
         }
 
+        public void DeletarCadastro()
+        {
+            ContextProduto.DeletarCadastroProduto();
+        }
 
         #endregion
 
